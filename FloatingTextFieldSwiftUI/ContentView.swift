@@ -8,9 +8,13 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var name: String = ""
+    @State var email: String = ""
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        VStack {
+            FloatingTextField(placeHolder: "Name", text: $name)
+            FloatingTextField(placeHolder: "Email", text: $email)
+        }.padding()
     }
 }
 
@@ -19,3 +23,4 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
